@@ -1,0 +1,315 @@
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-khaki: #E2E2B6;
+    --light-blue: #6EACDA;
+    --dark-blue: #03346E;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2rem;
+    color: #000
+}
+
+.top-intro {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+    background-color: var(--light-blue);
+    color: var(--dark-blue);
+}
+
+.top-intro span {
+    display: inline-block;
+    animation: scroll 10s linear infinite;
+    font-weight: bold;
+    font-size: 8rem;
+    padding: 3rem;
+}
+
+.top-intro span:hover {
+    animation-play-state: paused;
+}
+
+.welcome-container {
+    display: grid;
+    grid-template-columns: auto 1fr ;
+    height: 100%;
+    width: 100%;
+    gap: 2rem;
+    margin: 0 auto;
+    padding: 5rem 12rem;
+    text-align: left;
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h1 {
+    padding: 0;
+    margin: 0;
+    font-size: 6rem;
+    color: var(--dark-blue);
+}
+
+.intro-text {
+    font-size: 2rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+}
+
+.resume {
+    text-decoration: none;
+    color: #000;
+}
+
+p a.resume {
+    font-size: 1.2rem;
+}
+
+.profile-img {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+}
+
+h2 {
+    font-size: 4rem;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    color: var(--dark-blue);
+}
+
+.skills h2 {
+    margin-bottom: 3rem;
+}
+
+.skill-content {
+    animation: slideIn 1s ease-out;
+}
+
+.progressText {
+    font-size: 1.5rem;
+}
+
+.single-progress-txt {
+    display: flex;
+}
+
+.single-progress-txt h3 {
+    width: 10%;
+    color: var(--dark-blue);
+    position: relative;
+    left: 12px;
+}
+
+.progress {
+    border-radius: 3px;
+    overflow: visible;
+    background: #e6ecf3;
+    height: 8px;
+    margin-top: 10px;
+    width: 85%;
+}
+
+.progress-bar {
+    background: var(--dark-blue);
+    line-height: 10px;
+    font-size: 12px;
+    float: left;
+    text-align: center;
+}
+
+.button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 2px;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 80vh;
+    margin: 0;
+    padding: 0 2rem;
+}
+
+.contact-header {
+    margin: 0 auto 6rem auto; 
+    padding: 0;
+}
+
+.contact-header > p {
+    font-style: italic
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 980px;
+    margin-top: 4rem;
+    flex-wrap: wrap;
+}
+
+.contact-details {
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 1px #1f1f1f;
+    transition: transform 0.3s ease-out;
+}
+
+.contact-details:hover {
+    transform: translateY(8px);
+}
+
+.fa-facebook-square:before {
+    content: "\f082";
+}
+
+.fa-github:before {
+    content: "\f09b";
+}
+
+.fa-twitter:before {
+    content: "\f099";
+}
+
+.fas {
+    font-weight: 900;
+}
+
+.fas {
+    font-family: "Font Awesome 5 Free"
+}
+    
+.fab, .fas {
+    -webkit-font-smoothing: antialiased;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+}
+
+a {
+    text-decoration: none;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    background-color: var(--light-blue);
+    margin-bottom: 0;
+    font-size: 1rem;
+    color: var(--dark-blue);
+}
+
+@keyframes scroll {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+@keyframes slideIn {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .welcome-container {
+        display: grid;
+        grid-template-columns: 1fr ;
+        height: 100%;
+        width: 100%;
+        gap: 2rem;
+        margin: 0 auto;
+        padding: auto;
+        text-align: center;
+    }
+
+    .profile-img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .contact {
+        height: 100%;
+        padding: 0;
+    }
+  }
+
+  @media (max-width: 480px) {
+    body {
+        font-size: 1.2rem;
+    }
+
+    .top-intro span {
+        font-size: 2rem;
+    }
+
+    .welcome-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        height: 100%;
+        width: 100%;
+        gap: 2rem;
+        margin: 0;
+        padding: 1rem 0;
+        text-align: center;
+    }
+
+    .profile-img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .intro-text {
+        font-size: 1.2rem;
+    }
+
+    .contact {
+        height: 100%;
+        padding: 0;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .contact-links {
+        flex-direction: column;
+    }
+
+    .contact-details {
+        font-size: 1.5rem;
+    }
+  }
